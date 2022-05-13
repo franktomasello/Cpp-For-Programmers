@@ -19,13 +19,6 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       # Use mvn clean and package as the standard maven build phase
-      - run:
-          name: Build
-          command: mvn -B -DskipTests clean package
-      # Then run your tests!
-      - run:
-          name: Test
-          command: mvn test
       - run: 
           name: BD
           command: bash <(curl -s https://detect.synopsys.com/detect7.sh) --blackduck.url=https://testing.blackduck.synopsys.com --blackduck.username=sysadmin --blackduck.password=e5@w3^C1?m2P?W
