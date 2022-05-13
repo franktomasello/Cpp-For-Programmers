@@ -20,8 +20,8 @@ jobs:
       - checkout
       # Use mvn clean and package as the standard maven build phase
       - run: 
-          name: BD
-          command: bash <(curl -s https://detect.synopsys.com/detect7.sh) --blackduck.url=https://poc138.blackduck.synopsys.com/ --blackduck.username=PDFTron --blackduck.password=Blackduck!
+          name: BlackDuck Test
+          command: bash <(curl -s https://detect.synopsys.com/detect7.sh) --blackduck.url=https://poc138.blackduck.synopsys.com/ --blackduck.api.token=ZjZlMjk4OTEtNWM0OC00NzUzLTg1OTUtMWM1OGE3MTI4OWFlOjlmMTk1NGQ5LTZjMTItNDliMS05NDU0LTViYjM5ODcyZDFlOA== --detect.trust.cert=true
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
